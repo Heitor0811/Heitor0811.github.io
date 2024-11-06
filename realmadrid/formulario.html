@@ -1,0 +1,161 @@
+ <!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" type="image/png" sizes="32x32" href="logo.png">
+	<title>Cuiabá</title>
+
+
+	<style type="text/css">
+		:root {
+    --cor-principal: #0033A0 ; /* Azul do Real */
+    --cor-secundaria: #F7E300; /* Amarelo do Real*/
+    --cor-texto: #C8102E ;     /* Vermelho do real */
+    --cor-fundo: #ffffff;
+}
+		body {
+			height: 100vh;
+		font-family: arial;
+		display: flex;
+		justify-content: center;
+		flex-direction: row;
+		align-items: center ;
+		background-color: black;
+
+		
+	}
+	#box{
+		width: 50%;
+		
+		border-radius: 10px;
+		padding: 14px;
+				background-image: url('realm.png');
+		background-size: cover;
+		background-position: center;
+		border: solid black 1px;
+		
+
+	}
+
+		label {
+			color: var(--cor-principal);
+			
+			font-weight: bold;
+
+		}
+
+		input[type="text"], 
+		input[type="email"], 
+		input[type="color"],
+		input[type="password"],
+		input[type="date"],
+		input[type="number"],
+		input[type="range"],
+		input[type="url"]
+		{
+			width: 100%;
+			height: 30px;
+			border-radius: 11px;
+			margin-bottom: 11px;
+			margin-top: 4px;
+			background-color:transparent;
+			border-color: 	black;
+			border: 0px;
+			opacity: 	50%;
+			color: var(--cor-principal);
+		} 
+		input[type="password"]{
+			color: white;
+		}
+		input::placeholder{
+			color: var(--cor-fundo);
+		} 
+		input[type="range"]{
+			accent-color: var(--cor-principal);
+		}
+		input[type="checkbox"],
+		input[type="radio"] {
+			accent-color:black;
+
+			width: 17px;
+			height: 17px;
+		}
+
+		input[type="submit"]{
+			background: linear-gradient(to right, var(--cor-fundo), var(--cor-texto), var(--cor-principal));
+			width: 100%;
+			border-radius: 10px;
+			padding: 10px;
+			color: black;
+			border-color: black;
+			font-size: 20px;
+			color: #332A1A;	
+			color: white;		
+
+
+		}
+		input[type="submit"]:hover{
+			background: linear-gradient(to left, var(--cor-fundo), var(--cor-texto), var(--cor-principal));
+		}
+		input:focus{
+			background-color: white;
+			border: 1px solid black;
+			color: black;
+		}
+		#pau{
+			color: var(--cor-secundaria);
+	
+		}
+	</style>
+
+</head>
+<body>
+
+	<div id="box">
+		<div id="pau">
+<h1>Cadastro de usuários</h1>
+</div>
+<form>
+	<label for="nome">Nome</label>
+	<input type="text" name="nome" id="nome" placeholder="Digite um nome" required minlength="5">
+	<br>
+
+	<label for="email">E-mail</label>
+	<input type="email" id="email" required placeholder="nome@email.com">
+	<br>
+
+	<label for="senha">Senha</label>
+	<input type="password" id="senha" minlength="6" required>
+	<br>
+
+
+	<label>Sexo</label>
+	<input type="radio" name="sexo" value="f" id="f">
+	<label for="f">F</label>
+	<input type="radio" name="sexo" value="m" id="m">
+	<label for="m">M</label>
+	<br>
+	<br>
+
+
+	<label for="aniversario">Data de aniversário</label>
+	<input type="date" id="aniversario" max="31/12/2009">
+	<br>
+
+	<label for="idade">Idade</label>
+	<input type="number" id="idade" type="number" min="15">
+	<br>
+
+
+	<label for="pagina">Página</label>
+	<input type="url" id="pagina" placeholder="https://suapagina.com">
+	<br>
+
+	<input type="submit" value="Cadastrar">
+
+</form>
+</div>
+
+</body>
+</html>
